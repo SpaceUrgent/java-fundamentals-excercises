@@ -1,5 +1,7 @@
 package com.bobocode.cs;
 
+import com.bobocode.cs.*;
+
 import com.bobocode.cs.exception.EmptyStackException;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.*;

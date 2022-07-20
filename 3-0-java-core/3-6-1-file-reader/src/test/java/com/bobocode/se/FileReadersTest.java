@@ -2,12 +2,14 @@ package com.bobocode.se;
 
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FileReadersTest {
 
     @Test
-    void testReadWholeFileOnEmptyFile() {
+    void testReadWholeFileOnEmptyFile() throws IOException {
         String fileContent = FileReaders.readWholeFile("empty.txt");
 
         assertEquals("", fileContent);
@@ -15,7 +17,7 @@ public class FileReadersTest {
     }
 
     @Test
-    void testReadWholeFileOnFileWithEmptyLines() {
+    void testReadWholeFileOnFileWithEmptyLines() throws IOException {
         String fileContent = FileReaders.readWholeFile("lines.txt");
 
         assertEquals("Hey!\n" +
@@ -26,7 +28,7 @@ public class FileReadersTest {
     }
 
     @Test
-    void testReadWholeFile() {
+    void testReadWholeFile() throws IOException {
         String fileContent = FileReaders.readWholeFile("simple.txt");
 
         assertEquals("Hello!\n" + "It's a test file.", fileContent);
